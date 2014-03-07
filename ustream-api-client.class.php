@@ -8,11 +8,11 @@ class UstreamApiClient {
     public $files;
 
     function __construct() {
-        $this->origin       = '/home/fabio/Gravacoes/radio-da-juventude/programas-ustream/';
+        $this->origin       = '/home/fabio/Gravacoes/radio-da-juventude/programas-ustream/converted/';
         $this->destination  = '/home/fabio/Gravacoes/radio-da-juventude/programas-ustream/renamed/';
         $this->path_data    = $this->origin . 'data.json';
         $this->url_data     = 'http://api.ustream.tv/json/video/17343201/listAllVideos?key=laborautonomo&limit=100';
-        $this->format       = 'flv';
+        $this->format       = 'mp3';
 
         $this->files        = $this->list_files();
     }
@@ -29,7 +29,7 @@ class UstreamApiClient {
     }
 
     public function list_files() {
-        $dir = opendir($this -> origin);
+        $dir = opendir($this->origin);
         $files = array();
 
         while ($nome_itens = readdir($dir)) {
@@ -74,11 +74,7 @@ class UstreamApiClient {
                 } 
             ));
             
-            $title  = preg_replace('/(.*) (.*)/i', '$1', $video->createdAt) . '-' . $this->strip_accents(strtolower($video->title));
-            
-            if(!isset($title_prev)) $title_prev = $title;
-            if($title == $title_prev) $title .= "-$count";
-            $title_prev = $title; 
+            $title  = preg_replace('/(.*) (.*)/i', '$1', $video->createdAt) . '-' . $count . '-' . $this->strip_accents(strtolower($video->title));
             
             echo "$percent% - copiando $title";
             
