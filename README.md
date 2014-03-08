@@ -3,6 +3,8 @@ ustream-api-client
 
 Client for ustream.tv API to read and rename data of downloaded videos
 
+Read the Ustream API Documentation [here](http://developer.ustream.tv/data_api/docs "Access the documentation")
+
 ### Requeriments
 
 PHP 5.3 >=
@@ -23,4 +25,5 @@ Alter the ustream-api-client.class.php
 ### Convert flv to mp3 (optional)
 
 The ustream's downloaded files have flv format. If you want convert to mp3 before execute ustream-api-client, copy the file convert-flv-to-mp3.sh into FLVs folder and execute the bash script:
+
     $ bash convert-flv-to-mp3.sh
