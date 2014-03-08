@@ -8,11 +8,11 @@ class UstreamApiClient {
     public $files;
 
     function __construct() {
-        $this->origin       = '/home/fabio/Gravacoes/radio-da-juventude/programas-ustream/converted/';
-        $this->destination  = '/home/fabio/Gravacoes/radio-da-juventude/programas-ustream/renamed/';
+        $this->origin       = 'path_origin';
+        $this->destination  = 'path_destination';
         $this->path_data    = $this->origin . 'data.json';
         $this->url_data     = 'http://api.ustream.tv/json/video/17343201/listAllVideos?key=laborautonomo&limit=100';
-        $this->format       = 'mp3';
+        $this->format       = 'flv';
 
         $this->files        = $this->list_files();
     }
