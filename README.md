@@ -37,6 +37,6 @@ $ bash convert-flv-to-mp3.sh
 
 ##### Requeriments
     
-```sh
+```
 # apt-get install ffmpeg libavcodec-extra-53
 ```
