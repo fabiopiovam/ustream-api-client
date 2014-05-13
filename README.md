@@ -22,18 +22,21 @@ Alter the ustream-api-client.class.php
     ```
 
 ### Executing
-    $php ustream-api-client.php
+
+    ``` sh
+    $ php ustream-api-client.php
+    ```
 
 ### Convert flv to mp3 (optional)
 
 The ustream's downloaded files have flv format. If you want convert to mp3 before execute ustream-api-client, copy the file convert-flv-to-mp3.sh into FLVs folder and execute the bash script:
     
     ``` sh
-    $bash convert-flv-to-mp3.sh
+    $ bash convert-flv-to-mp3.sh
     ```
 
 ##### Requeriments
     
     ``` sh
-    #apt-get install ffmpeg libavcodec-extra-53
+    # apt-get install ffmpeg libavcodec-extra-53
     ```
