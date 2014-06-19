@@ -29,7 +29,7 @@ $ php ustream-api-client.php
 
 ### Conversión de flv para mp3 (opcional)
 
-Los archivos almacenado en Ustream son bajados en lo formato FLV. Si quieres convertir para MP3 antes de ejecutar el script `ustream-api-client.php`, haga una copia del archivo `convert-flv-to-mp3.sh` y pongalo adentro del directório FLV. Después ejecute en la consola:
+Los archivos almacenados en Ustream son bajados en lo formato FLV. Si quieres convertir para MP3 antes de ejecutar el script `ustream-api-client.php`, haga una copia del archivo `convert-flv-to-mp3.sh` y pongalo adentro del directório FLV. Después ejecute en la consola:
 
 ```sh
 $ bash convert-flv-to-mp3.sh
